@@ -1,0 +1,159 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+h1{
+    text-shadow: 
+    -1px -1px 0px #000, 
+    -1px 1px 0px #000,                    
+     1px -1px 0px #000,                  
+     1px 0px 0px #000;
+    color: #fff;
+    font-size: 60px;
+    font-family: monospaces;
+    margin-top: 3px;
+}
+h4{
+    margin:5px;
+    color: #fff;
+}
+p{
+    color: #fff;
+}
+button{
+    font-size: 30px;
+    cursor: pointer;
+    box-shadow: #fff;
+}
+.botaoSimples:hover{
+    background-color: rgb(165, 165, 165);
+}
+.zero:hover{
+    background-color: rgb(165, 165, 165);
+}
+.botaoOperador:hover{
+    background-color:#4860be8b;
+}
+.botaoEspecial:hover{
+    background-color:#4860be8b;
+}
+.botaoSimples:hover{
+    background-color: rgb(165, 165, 165);
+}
+body{
+    background-image: linear-gradient(to bottom right, rgb(71, 0, 107), rgb(75, 0, 224));
+}
+body li{
+    list-style: none;
+}
+#content{
+    background-color: rgb(30, 30, 30);
+    width: 550px;
+    height: 600px;
+    border-radius: 20px;
+    margin-top: 1%;
+    margin-bottom: 200px;
+
+}
+.icon{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin-top:3px;
+    margin-right: 0px;
+    border-bottom: 6px solid #243269;
+    border-right: 6px solid rgb(27, 0, 0);
+    border-left: 1px solid #000;
+    border-top: 1px solid #000;
+    
+}
+.icon:hover{
+    border-bottom: 1px solid;
+    border-right: 1px solid;
+    border-left: 1px solid;
+    transition: 100ms;
+}
+
+.teclado{
+    flex-direction: row-reverse;
+}
+.botaoSimples{
+    width: 90px;
+    height: 90px;
+    float: left;
+    background-color: rgb(196, 196, 196);
+}
+.botaoSimples:hover{
+    border-bottom: 6px solid rgb(104, 104, 104);
+    border-right: 6px solid rgb(0, 0, 0);
+    transition: 100ms;
+}
+.zero{
+    width: 270px;
+    height: 90px;
+    float: left;
+    background-color: rgb(196, 196, 196);
+}
+.zero:hover{
+    border-bottom: 6px solid rgb(104, 104, 104);
+    border-right: 6px solid rgb(0, 0, 0);
+    transition: 100ms;
+}
+
+#exibirResult{
+    width: 360px;
+    height: 120px;
+    float: left;
+    background-color: #fff;
+    border: 1px solid #000;
+    border-radius: 10px;
+    margin: 5px 0px 10px 0px;
+    font-size: 30px;
+    text-align: center;
+
+}
+.botaoOperador{
+    width: 90px;
+    height: 90px;
+    float: left;
+    color: #fff;
+    background-color: #485fbe;
+    margin-left: 5px;
+    border-radius: 5px;
+}
+.botaoOperador:hover{
+    border-bottom: 6px solid #243269;
+    border-right: 6px solid rgb(27, 0, 0);
+    transition: 100ms;
+}
+.botaoEspecial:hover{
+    border-bottom: 6px solid #243269;
+    border-right: 6px solid rgb(27, 0, 0);
+    transition: 100ms;
+}
+.botaoEspecial{
+    width: 90px;
+    height: 90px;
+    float: left;
+    background-color: #485fbe;
+    color:#fff;
+    margin-top: 1px;
+    border-radius: 5px;
+}
+.digCont{
+    border-radius: 5px;
+    margin-top: 2px;
+}
+#historico{
+    width: 150px;
+    height: 600px;
+    border-radius: 20px 0px 0px 20px;
+    background-color: rgb(31, 129, 221);
+    float:left;
+    margin-right: 20px;
+}
+#itemHistorico{
+    color: #fff;
+    font-size: 20px;
+    margin-top: 6px;
+}

@@ -1,0 +1,83 @@
+<!doctype html>
+<html Lang="pt-br">
+	<head>
+		<title>Calculadora</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/estilo.css">
+		<script>
+			
+			function inserir(num){
+			var numEscrito = document.getElementById("exibirResult").innerHTML;
+			document.getElementById("exibirResult").innerHTML = numEscrito + num;
+		    }
+			
+			function apagar(){
+				document.getElementById("exibirResult").innerHTML = "";
+			}
+			function apagarUm(){
+				resultado = document.getElementById("exibirResult").innerHTML;
+				document.getElementById("exibirResult").innerHTML = resultado.substring(0, resultado.length -1);
+			}
+			function final(){
+				
+				var resultado = document.getElementById("exibirResult").innerHTML;
+				var conta = resultado;
+				if(resultado.length > 18){
+					document.getElementById("exibirResult").innerHTML = "Número muito alto!";
+				}
+				else{
+					var total = document.getElementById("exibirResult").innerHTML = document.getElementById("exibirResult").innerHTML + "  =  " + eval(resultado);									
+					document.getElementById("exibirResult").innerHTML = total;
+					var resto = eval(resultado);
+					document.getElementById("itemHistorico").innerHTML += resultado +  " = " + resto + "<br>";
+					document.getElementById("exibirResult").innerHTML = ""
+				}
+			}
+			function reset(){
+				document.getElementById("itemHistorico").innerHTML ="";
+			}
+		</script>
+	</head>
+	</body>
+	 <center>
+		<h1>Calculadora</h1>
+		<div id="content">
+			
+			<div id="historico">
+				<img src="img/refreshIcon.png" class="icon" onclick="reset()">
+				<p>Histórico</p>
+				<ul id="itemHistorico">
+					
+				</ul>
+			</div>
+				<div id="exibirResult">
+				
+				</div>
+			<div name="teclado"cclass="teclado">
+			<ul>
+				<li><button name="btn1" class="botaoSimples" onclick="inserir('1')">1</button></li>
+				<li><button name="btn2" class="botaoSimples" onclick="inserir('2')">2</button></li>
+				<li><button name="btn3" class="botaoSimples" onclick="inserir('3')">3</button></li>
+				<li><button name="btn4" class="botaoOperador" onclick="inserir('+')">+</button></li>
+				<li><button name="btn5" class="botaoSimples" onclick="inserir('4')">4</button></li>
+				<li><button name="btn6" class="botaoSimples" onclick="inserir('5')">5</button></li>
+				<li><button name="btn7" class="botaoSimples" onclick="inserir('6')">6</button></li>
+				<li><button name="btn8" class="botaoOperador" onclick="inserir('-')">-</button></li>
+				<li><button name="btn9" class="botaoSimples" onclick="inserir('7')">7</button></li>
+				<li><button name="btn10" class="botaoSimples" onclick="inserir('8')">8</button></li>
+				<li><button name="btn11" class="botaoSimples" onclick="inserir('9')">9</button></li>
+				<li><button name="btn12" class="botaoOperador" onclick="inserir('*')">x</button></li>
+				<li><button name="btn13" class="zero" onclick="inserir('0')">0</button></li>
+				<li><button name="btn14" class="botaoOperador" onclick="inserir('/')">÷</button></li>
+				<li><button name="btn15" class="botaoEspecial" onclick="apagarUm()">Del</button></li>
+				<li><button name="btn16" class="botaoEspecial" onclick="apagar()">C</button></li>
+				<li><button name="btn17" class="botaoEspecial" onclick="inserir('.')">,</button></li>
+				<li><button name="btn18" class="botaoOperador" onclick="final('=')">=</button></li>
+			</ul>
+
+			</div>
+		</div>
+	</center>
+	<h4>Developed by William e Felipe França</h4>
+	</body>
+</html>
